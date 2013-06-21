@@ -7,5 +7,5 @@ else
 	remote_ssh_url=$1
 fi
 
-git config set-url origin $remote_ssh_url
+git remote set-url origin $remote_ssh_url
 git push --set-upstream origin master
