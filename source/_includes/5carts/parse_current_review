@@ -12,14 +12,18 @@ Usage:
 {% include JB/setup %}
 
 {% assign _date = current_review.date %}
-{% assign _name = current_review.name %}
+{% assign _author = current_review.author %}
+{% if current_review.name %}
+	{% assign _name = current_review.name %}
+{% else %}
+	{% assign _name = current_review.title %}
+{% endif %}
 {% capture _alias %}{{ current_review.alias | join: '; ' }}{% endcapture %}
 {% assign _link = current_review.link %}
 {% assign _tags = current_review.tags %}
 {% assign _rate_quality = current_review.rate_quality %}
 {% assign _rate_use = current_review.rate_use %}
 {% assign _open_source = current_review.open_source %}
-{% assign _open_format = current_review.open_format %}
 {% assign _open_format = current_review.open_format %}
 
 {% if current_review.layout == 'review' %}
