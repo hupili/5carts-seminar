@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
 git stash 
-git checkout 5carts
-git pull upstream master
-git checkout master
-git merge 5carts
+git pull git://github.com/hupili/5carts.git
 git stash pop
 
