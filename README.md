@@ -25,6 +25,8 @@ Write and distribute your reviews:
    See the rendering result on [5carts project website](http://hupili.github.io/5carts/).
    * Use `./build.sh` to build the site locally. 
    * Use `./deploy.sh` to push the new pages to GitHub-Pages.
+   * You can also run an HTTP server locally to preview the effects:
+   `jekyll --server`.
 
 Stay up-to-date:
 
