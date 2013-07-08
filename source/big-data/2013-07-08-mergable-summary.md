@@ -10,6 +10,8 @@ layout: review
 mathjax: true
 ---
 
+## Background
+
 Summary: tradeoff between efficiency and accuracy.
 
 Mergable: e.g. sum, max, can be applied on each summarized pieces.
