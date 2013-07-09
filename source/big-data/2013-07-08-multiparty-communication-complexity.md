@@ -3,7 +3,7 @@ title: Multiparty Communication Complexity in the Number-in-Hand (NIH) Model
 author: Qin Zhang
 institution: IBM Research , USA
 date: 2013-07-08
-link: 
+link: http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Qin_Zhang.html
 tags: []
 language: en
 layout: review

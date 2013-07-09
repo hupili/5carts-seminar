@@ -3,7 +3,7 @@ title: Local Computation Algorithms
 author: Ning Xie
 institution: Florida International University, USA
 date: 2013-07-09
-link: 
+link: http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Ning_Xie.html
 tags: []
 language: en
 layout: review

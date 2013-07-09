@@ -3,7 +3,7 @@ title: The Art of Proving Lower Bounds in Property Testing
 author: Kevin Matulef
 institution: Aarhus University, Denmark
 date: 2013-07-08
-link: 
+link: http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Kevin_Matulef.html
 tags: []
 language: en
 layout: review

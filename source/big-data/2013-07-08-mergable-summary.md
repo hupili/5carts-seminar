@@ -3,7 +3,7 @@ title: Mergeable Summaries
 author: Ke Yi
 institution: HKUST, Hong Kong
 date: 2013-07-08
-link: 
+link: http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Ke_Yi.html
 tags: []
 language: en
 layout: review
