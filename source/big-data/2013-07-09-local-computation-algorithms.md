@@ -2,7 +2,7 @@
 title: Local Computation Algorithms
 author: Ning Xie
 institution: Florida International University, USA
-date: 2013-07-08
+date: 2013-07-09
 link: 
 tags: []
 language: en

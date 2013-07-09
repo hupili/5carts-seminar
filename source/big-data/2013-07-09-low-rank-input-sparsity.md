@@ -2,7 +2,7 @@
 title: Low Rank Approximation and Regression in Input Sparsity Time
 author: David Woodruff
 institution: IBM Research, USA
-date: 2013-07-08
+date: 2013-07-09
 link: http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/David_Woodruff.html
 tags: []
 language: en
