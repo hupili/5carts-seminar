@@ -10,7 +10,9 @@ layout: review
 mathjax: true
 ---
 
-## HOTPLANET 2013 Keynote Talk Smartphones, Crowds, and the Cloud: Population Guided Sensing Systems
+HOTPLANET 2013
+
+## Smartphones, Crowds, and the Cloud: Population Guided Sensing Systems
 
 Keynote
 
@@ -154,5 +156,142 @@ ZHAN Lei
 
 real system deployment
 
+
+--------
+
+
+## Efﬁcient Social Network Data Query Processing on MapReduce
+
+Lixin Gao
+
+RDF: subject, predicate, object
+
+SPARQL: W3C. used to query RDF.
+
+Traditional: Transform SPARQL to SQL.
+not scalable.
+
+RDBMS.
+
+state-of-the-art: direct map SQL to MapReduce.
+problem: intermediate data is too large.
+
+observation: duplicated fields
+
+primitives:
+
+   * multiple-join-with-filter:
+   add a filter step to reduce.
+   * selection-join:
+   selection does not need a separate job.
+
+Apache Pig, Apache Hive.
+
+Notes:
+
+   * Looks like multiple-join-with-filter's
+   filter stage can be implemented in mapper for better efficiency.
+
+## Extrapolating Sparse Large-Scale GPS Traces for Contact Evaluation
+
+overcome mobility data sparsity
+
+trajectory projection
+
+## Metric Convergence in Social Network Sampling
+
+random, stratified, crawling
+
+BFS: center
+
+DFS: outskirts
+
+20% is needed to get good estimators.
+
+5 years data collection of full Digg.
+development is about 2 months.
+maintenance cost is high for the DB part.
+
+data not open.
+planning for a platform to neutrally evaluate sampling algorithms.
+
+------
+
+
+## Lessons Learned from the NetSense Smartphone Study
+
+Aaron Striegel
+
+privacy
+
+PhoneLab -- Geoffrey Challen
+
+750K SoCS grant.
+75K for devices.
+
+200 users.
+
+CyanogenMod
+
+"The Checklist Manifesto"
+
+active phones drops with time
+
+quiz response drops
+
+Lessons:
+
+   * phone reimbursement. free phone?
+   * Cohort effects
+
+## Information Bazaar: a Contextual Evaluation
+
+Hamed Haddadi
+
+Get data from the user.
+how much they value their data?
+some inconsistency observed on people.
+
+privacyvalue.org
+
+<http://www.eecs.qmul.ac.uk/~marjan/privacy_site/index.php>
+
+anchoring effect
+
+cookie brokers
+
+## It’s Tea Time: Do You Know Where Your Mug Is?
+
+Yanyong Zhang
+
+Octopus
+
+smart-building.
+
+app built.
+
+hard time in publication (?)
+
+track mugs in the lab.
+
+example: cars.
+smart cars? many existing sensors.
+e.g. gauge, speed, etc.
+
+Smart building deployment lessons:
+
+   * deployment not standardized.
+   * use cases not clear
+   * manageable for building owner
+
+hourglass design
+
+from time to time, ask students to write new apps.
+
+app: is my advisor in the room:
+
+   * chair
+   * mobility sensor
+   * door open
 
 
