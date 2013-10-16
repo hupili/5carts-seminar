@@ -1,5 +1,5 @@
 ---
-title:
+title: CAS-CUHK Data Science
 author:
 institution:
 date: 2013-10-16
