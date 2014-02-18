@@ -4,5 +4,5 @@
 dir_output="_site"
 
 rm -rf $dir_output
-jekyll --safe --no-auto $dir_output
+jekyll build $dir_output
 

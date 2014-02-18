@@ -1,5 +1,5 @@
 ---
-title: Certificate Reputation: Cryptographic Analysis of Public Keys and Certificates in Use
+title: "Certificate Reputation: Cryptographic Analysis of Public Keys and Certificates in Use"
 author: Dr. Brian A. LaMacchia
 institution: XCG Security & Cryptography, MSR
 date: 2014-01-28
