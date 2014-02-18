@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Load balancing in geo-distributed datacenters</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Load balancing in geo-distributed datacenters </span> </li>
+	<li>Author: <span class="review_meta_value"> Henry Xu </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-10-18</span></li>
+	<li>Category: <span class="review_meta_value">cloud</span></li>
+	<li>Link: <span class="review_meta_value"><a href="http://www.cs.cityu.edu.hk/~hxu/">http://www.cs.cityu.edu.hk/~hxu/</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<p>assumption:
+every data center has all user data.
+problem:
+redirect user requests to load balanced DCs.</p>
+
+<p>[Sigcomm&#39;09. A. Qureshi.].
+RTO (Regional Transmission Office).
+Electricity price vary at places.</p>
+
+<p>Objective:</p>
+
+<ul>
+<li>Users: care latency.
+Amazon, 2006, 1% less revenue for 100ms more delay.</li>
+<li>DC: cost</li>
+</ul>
+
+<p>variable: query routing</p>
+
+<p>User latency modeling:</p>
+
+<ul>
+<li>network: distance; empirical.</li>
+<li>process: queueing models.</li>
+<li>processing delay for multiple DCs has not been (well) modeled yet.</li>
+</ul>
+
+<h2>Objective</h2>
+
+<p>different cost</p>
+
+<p>Carbon footprint: environmental cost.
+Different places use different energy sources (fuel).
+Fuel mix stays stable for locations.
+one more price term in obj.</p>
+
+<p>Renewable energy, e.g. wind, solar.
+on-site renewable generation: cleaner, cheaper.
+use renewable whenever possible.
+subtract a term from the obj.
+(L.L. Andrew).
+renewable only counts for small portion, e.g. 1%.
+So load can be moved to grid freely.</p>
+
+<p>Model the cooling overhead.
+<a href="http://en.wikipedia.org/wiki/Power_usage_effectiveness">PUE</a>.
+in this talk: total power / server power.
+baseline: constant PUE factor.
+Emerson,(R), Liebert DSE:
+PUE depends on cooling mode and temperature.
+cooling mode: mechanical (compression); outside air.
+<a href="https://www.facebook.com/PrinevilleDataCenter">FB PrinevilleDataCenter</a>
+outside air used in practice, no mechanical mode,
+turn off DC if overheat.
+model: change constant to dynamic PUE; can be predicted; no change in formulation.
+PUE factor changes in the time-scale of hours.</p>
+
+<p>bandwidth cost.
+variable become tuple <code>&lt;DC, network&gt;</code>.
+different price to send back response data along different paths.</p>
+
+<p>adjust between interactive workload (e.g. web page)
+and batch workload (data mining).
+Google philosophy: every machine should be general, can do different jobs (?).
+2009 Google data, 30% server utilization (Minghua, ?).
+new problem: joint allocation and request routing.
+[ICAC&#39;13, Hong Xu].</p>
+
+<p>Previous efforts:
+change formulation.
+general framework?
+general query routing algorithm?</p>
+
+<h2>A General Formulation</h2>
+
+<p>common assumption:</p>
+
+<ul>
+<li>offline optimization, time-scale, hourly, e.g. 30min.</li>
+<li>user demand predictable, price unknown.</li>
+</ul>
+
+<p>tradeoff between performance and cost.</p>
+
+<ul>
+<li>user-specific utility function.
+concave to the amount of resources allocated.
+$U<em>i(x</em>i)$, $x_i$ is a vector (allocation to DCs).</li>
+<li>DC cost, convex.</li>
+<li>sum of user&#39;s utility minus DC cost.</li>
+</ul>
+
+<p>constraints</p>
+
+<ul>
+<li>allocated resource equals the demand.</li>
+<li>user, QoS constraints, assumed to be convex sets</li>
+<li>DC capacity constraints, assumed to be convex sets</li>
+</ul>
+
+<p>fairness not considered?</p>
+
+<p>a user in the formulation can be a metropolitan are, DSN proxy.
+only hundreds of variables.</p>
+
+<p>[Akamai, SIGOPS&#39;10], user is IP prefix.
+simple algorithm, round robin depending on the IP prefix.</p>
+
+<p>distributed algorithm.
+usual: dual-decomposition + subgradient methods.</p>
+
+<p>S. Boyd, et. al..
+distributed optimization and statistical learning via the alternating direction method of multipliers.
+Foundations and trends in Machine Learning, 2011.
+ADMM.</p>
+
+<p>ADMM.
+Augmented Lagrangian,
+add penalty term of equality constraints.
+advantages:
+better convergence; good numerical stability.
+direct application of ADM on the problem is centralized:
+penalty term is not decomposable.</p>
+
+<p>auxiliary variables.
+users and cloud solve separately.</p>
+
+<p>extension: three sets of variables?
+ADMM only deals with two sets of variables.</p>
+
+<h2>Future</h2>
+
+<p>realistic charging schemes.
+e.g. Google&#39;s contracts with electric utilities online.</p>
+
+<ul>
+<li>Basic facility</li>
+<li>demand.
+utility, measure, e.g. 15min.
+over one month, take the maximum demand.
+i.e. peak demand charge.</li>
+<li>energy charge: normal billing method.</li>
+</ul>
+
+<p>one Sigmetric paper:
+use battery to save cost.
+(shaving peak demand).</p>
+
+<p>idea:
+same situation in smart grid;
+EVs are natural big batteries.</p>
+
+<p>demand response in smart grid.
+grid can explicitly incentivise DC to shape their demand.
+DC response whether to take this offer.</p>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

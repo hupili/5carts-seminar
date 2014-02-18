@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hash Function Learning</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Hash Function Learning </span> </li>
+	<li>Author: <span class="review_meta_value"> Professor Wei-Shi Zheng </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-08-30</span></li>
+	<li>Category: <span class="review_meta_value">machine-learning</span></li>
+	<li>Link: <span class="review_meta_value"><a href="http://www.eecs.qmul.ac.uk/~jason/">http://www.eecs.qmul.ac.uk/~jason/</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<h1>Background</h1>
+
+<p>Tianhe 2, SYSU and Canton (Guandong)</p>
+
+<p>application: Image search</p>
+
+<p>Active learning.</p>
+
+<h2>Hashing</h2>
+
+<p>K nearest neighbour search</p>
+
+<p>traditional: pairwise distance. intractable.</p>
+
+<p>subspace method.</p>
+
+<h3>Data independent hashing</h3>
+
+<p>Locality sensitive hashing:</p>
+
+<ul>
+<li>Sample w and b randomly and get the bits.</li>
+</ul>
+
+<h3>Hash Function learned from data</h3>
+
+<p>Spectral Hashing (from a graph encoding similarity)</p>
+
+<p>Spectral</p>
+
+<p>similar nodes -- hashed to same bits
+dissimilar nodes -- .. different</p>
+
+<h3>Active Hashing</h3>
+
+<p>&quot;relearn&quot;: all newly labelled data.</p>
+
+<p>focus of active hashing: how to select data for users to label.</p>
+
+<p>focus of this work: do not relearn all the data.</p>
+
+<h3>Previous works</h3>
+
+<ul>
+<li>Most: assume data available in advance.
+Supervised learning.</li>
+<li>Active Hashing.</li>
+</ul>
+
+<h2>Smart Hashing Update</h2>
+
+<p>Traditional: update with all data.
+This: select some of them, more efficient, same performance.</p>
+
+<p>k hash functions.</p>
+
+<ul>
+<li>old way: update all k bits.</li>
+<li>new way: update important bits to catch the user&#39;s feedback.</li>
+</ul>
+
+<p>Two strategy:</p>
+
+<ul>
+<li>consistency selection</li>
+<li>similarity selection</li>
+</ul>
+
+<h3>consistency selection</h3>
+
+<p>assume class prior distribution balanced.
+problematic for unbalanced case.</p>
+
+<p>only use relations in the same class.</p>
+
+<h3>similarity selection</h3>
+
+<p>$H$: matrix, data v.s. hash bit.</p>
+
+<p>remove one column from $H$ each time.
+Check the Frobenius norm of the difference between $S$ and $H \times H^T$.</p>
+
+<p>If small, the bit does not influence old data.
+We can update them for the new data.</p>
+
+<h3>Experiment</h3>
+
+<p>similar precision. less time.</p>
+
+<p>Liu, CVPR 2012.</p>
+
+<h3>Comments from audience</h3>
+
+<p>not only save time but also a kind of regularization.
+(limit the updated number of parameters)</p>
+
+<h2>Online Kernel Hashing</h2>
+
+<p>process <strong>sequential pairwise</strong> data.
+labeled, telling whether they are similar or dissimilar.</p>
+
+<p><code>$h(x) = sgn(W^Tx)$</code></p>
+
+<p><code>$h = argmax (f^TW^Tx)$</code>, $f$ is in 1 and -1.</p>
+
+<p>lPB, loss function</p>
+
+<p>loss bound.</p>
+
+<p>Minimal loss hashing (MLH).
+use stochastic gradient update.
+can be generalized to online learning.
+theoretical bound available but rather loose.</p>
+
+<h2>Q/A</h2>
+
+<p>Motivation of hashing, not classification:</p>
+
+<ul>
+<li>kNN is most accurate with dense data.
+Want to approximate kNN.</li>
+</ul>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

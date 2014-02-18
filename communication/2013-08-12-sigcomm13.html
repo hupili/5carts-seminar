@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sigcomm2013 Notes (Aug 12, Tutorial)</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Sigcomm2013 Notes (Aug 12, Tutorial) </span> </li>
+	<li>Author: <span class="review_meta_value">  </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-08-12</span></li>
+	<li>Category: <span class="review_meta_value">communication</span></li>
+	<li>Link: <span class="review_meta_value"><a href="http://conferences.sigcomm.org/sigcomm/2013/">http://conferences.sigcomm.org/sigcomm/2013/</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<p>I was originally responsible for MCC and later transferred to SDN Tutorial.</p>
+
+<p>The tutorial is given by:
+<a href="http://www.sdnacademy.net/">http://www.sdnacademy.net/</a></p>
+
+<p>The materials are well organized.
+Hands-on exercises are included.
+Participants can practice view <code>mininet</code>, a simulation platform run in Virtual Box&#39;s VM.
+Tutorials are included in form of wiki pages.
+It&#39;s also good material for self-learning.</p>
+
+<p>SDN:</p>
+
+<ul>
+<li>Switch: not only L2 switch;
+can be L3 and even higher.
+In SDN model, all forwarding devices are abstracted as &quot;switch&quot;.</li>
+<li>Controller:
+The centralized part to control the whole system;
+the place to accommodate most research works.
+Southbound protocol: talking with switches.
+OpenFlow is a southbound protocol.
+Northbound protocol: talking with applications.</li>
+<li>Application.
+e.g. measurement, ACL, routing information, etc.</li>
+</ul>
+
+<p>The essence of SDN:
+think of application instead of protocol.
+Just program the logic into the controller.
+Do not worry about how controller communicates with switches and manifests the rules.</p>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

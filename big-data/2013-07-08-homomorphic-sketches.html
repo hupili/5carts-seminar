@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Homomorphic Sketches: Shrinking Big Data without Sacrificing Structure</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Homomorphic Sketches: Shrinking Big Data without Sacrificing Structure </span> </li>
+	<li>Author: <span class="review_meta_value"> Andrew McGregor </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-07-08</span></li>
+	<li>Category: <span class="review_meta_value">big-data</span></li>
+	<li>Link: <span class="review_meta_value"><a href="http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Andrew_McGregor.html">http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Andrew_McGregor.html</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<h2>Background</h2>
+
+<p>File comparison:</p>
+
+<ul>
+<li>Direct</li>
+<li>hash $\log(n)$ for two $n$-bit files.</li>
+<li>construct sketches and compare e.g. hamming distances.</li>
+</ul>
+
+<p>Basic idea:</p>
+
+<ul>
+<li>file as vector, $v$</li>
+<li><strong>linear projection</strong> $M$. --&gt; $Mv$.</li>
+</ul>
+
+<p>Reduce dimension while preserving properties.</p>
+
+<p>Theory in connection with compressive sensing, metric embedding.</p>
+
+<p>Generalization:</p>
+
+<ul>
+<li>combinatorial and group theoretic structure?</li>
+<li>homomorphic compression: run algorithms on sketched data.</li>
+</ul>
+
+<blockquote>
+<p>A more general goal like our graph property preservation study.</p>
+</blockquote>
+
+<h2>Some results:</h2>
+
+<p>Graph compression:</p>
+
+<ul>
+<li>$n$ files encode rows of an adjacency matrix.
+e.g. social network.</li>
+<li>Theorem: $O(polylog(n))$ bit fingerprints to check graph connectivity.</li>
+<li>Extension to estimating cuts and eigenvalues.</li>
+</ul>
+
+<p>Texts:</p>
+
+<ul>
+<li>Hamming distance isn&#39;t robust to misalignments.</li>
+<li>Theorem: check equality of files <strong>up to rotation</strong>
+with fingerprints of length $D(n)polylog(n)$.</li>
+<li>$D(n)$ (?)</li>
+<li>Cyclic rotation is the operation that is preserved in fingerprints.</li>
+</ul>
+
+<h2>Graph Connectivity</h2>
+
+<ul>
+<li>Theorem: $O(polylog(n))$ bit fingerprints to check graph connectivity.
+w.h.p.</li>
+<li>Corollary: can monitor connectivity in a dynamic graph.</li>
+</ul>
+
+<p>All works here are for undirected graph. 
+Directed graph is hard for even simple queries.</p>
+
+<p>Bridge: an edge that is essential to global connectivity.
+Looks like dilemma that they must encode this edge 
+and they can not distinguish it locally.</p>
+
+<h3>Ingredient 1: Basic Algorithm</h3>
+
+<ul>
+<li>Loop until no edges.</li>
+<li>Each node, pick incident edge.</li>
+<li>for each connected component, pick an incident edge.</li>
+</ul>
+
+<p>After $O(\log n)$ rounds, selected edges include a spanning forest.</p>
+
+<h3>Ingredient 2: sketching neighbourhood</h3>
+
+<ul>
+<li>For node $i$, let <code>$a_i$</code> be indexed by node pairs. 
+For $i&lt;j$, put <code>$a_i[i,j]=1$</code>, and -1 vice versa.</li>
+<li>add up two <code>$a_1+a_2$</code>: encode the cuts.</li>
+<li>Lemma: The support of the vector encodes the cuts.</li>
+<li>Lemma: a result similar to compressive sensing. 
+Exists random $M$ such that we can deduce $support(a)$ from $Ma$.
+[Jowhari, Saglam, Tardos, 2011].</li>
+</ul>
+
+<h3>Put together</h3>
+
+<ul>
+<li>Sketch for node j: <code>$Ma_j$</code>.</li>
+<li>Run algorithm in sketch space.
+
+<ul>
+<li>Use <code>$Ma_j$</code> to get incident edges</li>
+<li>2 to n</li>
+<li>Find cut sets of $S$.</li>
+<li>(?)</li>
+</ul></li>
+</ul>
+
+<h3>Extension to sparsification</h3>
+
+<ul>
+<li>$k$ connectivity test.</li>
+<li>$1+\epsilon$-approximate graph cut</li>
+<li>Spectral sparsifier.
+a poly n factor. can do better?</li>
+</ul>
+
+<h3>k-connectivity</h3>
+
+<p>Algorithm: get spanning forest $k$ times on the residual graph.</p>
+
+<p>k-skeleton.</p>
+
+<p>Emulation:</p>
+
+<ul>
+<li>Generate $k$ different $M$.</li>
+<li>Find spanning forest of $G$.</li>
+<li>Subtract in the sketched space.</li>
+<li>Repeat $k$ times.</li>
+</ul>
+
+<h3>Approximation of all cuts</h3>
+
+<p>Theorem (Fung, et al.):
+sample by $p$, upweight by $1/p$.</p>
+
+<blockquote>
+<p>The Karger&#39;s one?
+OK. sample with a factor related with capacity of $u-v$ cut.</p>
+</blockquote>
+
+<h2>Misalignment</h2>
+
+<h3>False start</h3>
+
+<p>Rabin-Karp</p>
+
+<p>Fermat&#39;s Little Theorem</p>
+
+<p>Polynomial in random $r$: $f(r, a)$.</p>
+
+<p>Rotation is encoded by multiplication of $r$.</p>
+
+<p>Schwartz-Zippel:
+a result on polynomial identity testing. 
+(See Lau 2013 slides, L1)</p>
+
+<p>Result: not false negatives but false positives.</p>
+
+<h3>Beyond Schwartz-Zippel</h3>
+
+<p>Abel&#39;s irreducible theorem.</p>
+
+<h2>Conclusions</h2>
+
+<ul>
+<li>Homomorphic Sketches:
+compress s.t. we can run algorthms on compressed data directly.
+Resulting algorithms are <strong>parallelizable</strong> and <strong>streamable</strong>.</li>
+</ul>
+
+<h2>Q/A</h2>
+
+<p>Any graph properties that are not sketchable?</p>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

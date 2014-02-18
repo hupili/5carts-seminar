@@ -1,0 +1,649 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sigcomm2013 Notes (Aug 15)</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Sigcomm2013 Notes (Aug 15) </span> </li>
+	<li>Author: <span class="review_meta_value">  </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-08-15</span></li>
+	<li>Category: <span class="review_meta_value">communication</span></li>
+	<li>Link: <span class="review_meta_value"><a href="http://conferences.sigcomm.org/sigcomm/2013/">http://conferences.sigcomm.org/sigcomm/2013/</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<h2>Mosaic: Quantifying Privacy Leakage in Mobile Networks</h2>
+
+<p>Infer user information as much as possible from packet trace.</p>
+
+<ul>
+<li>User</li>
+<li>Session</li>
+</ul>
+
+<p>Communication spread on multiple IPs (from mobility between ISPs).</p>
+
+<p>Cellular service provider (CSP) or an Internet service provider (ISP)</p>
+
+<p>Session according to flow tuple.</p>
+
+<p>Ground truth: RADIUS</p>
+
+<p>Tessellation</p>
+
+<p>Main approaches:</p>
+
+<ul>
+<li>OSN ID</li>
+<li>traffic marker</li>
+<li>activity fingerprint</li>
+</ul>
+
+<p>OSN ID as anchors:
+URL, cookies, header.
+coverage too small, 2.3% (FB+Twitter?).</p>
+
+<p>traffic markers:</p>
+
+<ul>
+<li>Google doc, uniqueness = 1, persistency ~ 1</li>
+<li>...</li>
+</ul>
+
+<p>Traffic attribution.</p>
+
+<p>Activity fingerprint:</p>
+
+<ul>
+<li>Top k DNS names.</li>
+<li>mobile users can be identified by their favourite services.</li>
+</ul>
+
+<p>Mosaic, 12 classes.</p>
+
+<ul>
+<li>From user profiles</li>
+<li>From device</li>
+</ul>
+
+<p>Information leaked from profiles and network trace can supplement each other.</p>
+
+<h2>Expressive Privacy Control with Pseudonyms</h2>
+
+<p>Seungyeop Han</p>
+
+<p>Trackers link user information to form large profiles.</p>
+
+<p>some pros for tracking?
+personalization, security, revenue of service.</p>
+
+<p>Goal: give users control of how they are tracked.</p>
+
+<p>Current defense for tracking:</p>
+
+<ul>
+<li>3rd party cookie blocking.</li>
+<li>DoNoTrack</li>
+<li>Tor, proxies</li>
+</ul>
+
+<p>Relate IDs:</p>
+
+<ul>
+<li>cookie, JS localstorage, flash</li>
+</ul>
+
+<p>Create a set of pseudonyms.
+Users choose one from them for communication.</p>
+
+<p>Design:</p>
+
+<ul>
+<li>IPv6 allows many IPs per host.</li>
+<li>Fix network prefix, use whatever host part as they want.</li>
+<li>Use symmetric key to encrypt host part.</li>
+</ul>
+
+<p>Implementation:</p>
+
+<ul>
+<li>Policy engine as Chrome plugin.</li>
+<li>IPv6 tunnel broker -- get a /64 network.</li>
+</ul>
+
+<h2>Towards Efﬁcient Trafﬁc-analysis Resistant Anonymity Networks</h2>
+
+<p>Stevens Le Blond</p>
+
+<p>IP anonymity</p>
+
+<p>ingress + egress: can get info. from the time series.</p>
+
+<p>Problem: Onion routing does not resist traffic analysis.
+well-known.</p>
+
+<p>Anonymous Quanta:</p>
+
+<ul>
+<li>k-anonymity: indistinguishable among k clients.</li>
+</ul>
+
+<p>Threat model:</p>
+
+<ul>
+<li>global passive (traffic analysis) attack.</li>
+<li>active attack</li>
+<li>edge mix</li>
+</ul>
+
+<p>Constant rate. strawman.</p>
+
+<p>Padding at the core:</p>
+
+<ul>
+<li>Padding.
+Ideal: all pairs; but not practical.</li>
+<li>Split traffic in the core.</li>
+</ul>
+
+<p>Padding at the edges:</p>
+
+<ul>
+<li>k-anonymity set (kset)</li>
+<li>correlate k clients for rate change</li>
+</ul>
+
+<p>Month-long BitTorrent trace with 100K users.</p>
+
+<p>Compare with: Constant, Broadcast, P2P, etc.
+Aqua has higher bandwidth efficiency.</p>
+
+<h2>SplitX: High-Performance Private Analytics</h2>
+
+<p>Ruichuan Chen</p>
+
+<p>Each user should maintain their data locally.</p>
+
+<p>Make aggregated queries in distributed users private data storage
+while preserving the privacy.</p>
+
+<p>differential privacy.
+add noise to preserve privacy.</p>
+
+<p>CCS, NDSS</p>
+
+<p>Components:</p>
+
+<ul>
+<li>Analyst, assumed be malicious, want to find privacy of users.</li>
+<li>Users, hold the data, also malicious, want to find the analyze result.</li>
+<li>Servers, honest but curious.
+1 aggregator and 2 mixers.</li>
+</ul>
+
+<p><strong>XOR</strong> encryption. -- high performance</p>
+
+<p>answer pollution protect -- <strong>bucket</strong>. e.g. age range.</p>
+
+<p>mix knows what query ID the users answered:
+double-split.</p>
+
+<p>duplicated answer: triple splitting.</p>
+
+<hr>
+
+<h2>Participatory Networking: An API for Application Control of SDNs</h2>
+
+<p>Applications:</p>
+
+<ul>
+<li>SSHGuard, SSHGuard is a popular tool to detect brute-force attacks via log
+monitoring and install local ﬁrewall rules (e.g., via iptables) in
+response</li>
+<li>Ekiga, an open source video conferencing application</li>
+<li>ZooKeeper, a coordination service for distributed systems used by Twitter, Netﬂix, and Yahoo!</li>
+<li>Hadoop</li>
+</ul>
+
+<p>decompose control and visibility</p>
+
+<p>resolve conflicts between requests</p>
+
+<p>PANE: logical central controller.</p>
+
+<ul>
+<li>requests</li>
+<li>hints</li>
+<li>queries</li>
+</ul>
+
+<p>Share: principals, privilege</p>
+
+<p>share tree.</p>
+
+<p>PANE uses OpenFlow to manifest the allocation.</p>
+
+<h2>Developing a Predictive Model of Quality of Experience for Internet Video</h2>
+
+<p>QoE model.</p>
+
+<p>objective: peak signal-to-noise-ratio.</p>
+
+<p>subjective: mean opinion score.</p>
+
+<p>engagement: e.g. fraction of video viewed.</p>
+
+<p>Quality metrics:</p>
+
+<ul>
+<li>join time.</li>
+<li>buffering ratio</li>
+<li>rate of buffering</li>
+<li>rate of switching</li>
+<li>bitrate</li>
+</ul>
+
+<p>non-monotonic, e.g. avg. bitrate.</p>
+
+<p>confounding factors:</p>
+
+<ul>
+<li>type of video: Live and VoD have different viewing patterns.</li>
+<li>connectivity, e.g. DSL, wireless.</li>
+</ul>
+
+<p>Complex relationship. Use machine learning.
+decision tree is the best.</p>
+
+<p>test potential factors:</p>
+
+<ul>
+<li>relative information gain</li>
+<li>decision tree structure</li>
+<li>tolerance level</li>
+</ul>
+
+<p>split</p>
+
+<p>final: a collection of decision trees. 70% accuracy.</p>
+
+<h2>ElasticSwitch: Practical Work-Conserving Bandwidth Guarantees for Cloud Computing</h2>
+
+<p>ElasticSwitch (ES)</p>
+
+<p>tenant</p>
+
+<p>Goal:</p>
+
+<ul>
+<li>min bandwidth guarantee: <strong>Hose model</strong></li>
+<li>work-conserving allocation</li>
+<li>practical: .</li>
+</ul>
+
+<p>table 1 for the review of past works.</p>
+
+<p>ES runs in hypervisor</p>
+
+<p>turns hose model into VM-to-VM pip guarantees</p>
+
+<p>max-min allocation.</p>
+
+<hr>
+
+<h2>An In-depth Study of LTE: Effect of Network Protocol and Application Behavior on Performance</h2>
+
+<p>unexpected slow-start.</p>
+
+<p>inefficient applications.</p>
+
+<p>end-point use Cubic TCP.</p>
+
+<h2>Full Duplex Radios</h2>
+
+<p>Andrea Goldsmith. &quot;Wireless Communications&quot;
+-- generally not possible to do full duplex because of self-interference.</p>
+
+<p>Just subtract it?</p>
+
+<p>transmit and receive, see some harmonics.</p>
+
+<p>contribution: in-band single antenna full duplex radios.</p>
+
+<p>related project, <a href="http://sing.stanford.edu/fullduplex/">http://sing.stanford.edu/fullduplex/</a></p>
+
+<p>also some other pointers of full-duplex radio on Sachin Katti&#39;s page,
+<a href="http://www.stanford.edu/%7Eskatti/">http://www.stanford.edu/~skatti/</a></p>
+
+<h2>Bringing Cross-Layer MIMO to Today’s Wireless LANs</h2>
+
+<p>researchers -- build techniques into hardware.
+hard to run on commodity hardware.</p>
+
+<p><strong>OpenRF</strong>, like OpenFlow in wireless.</p>
+
+<ul>
+<li><strong>Interference nulling</strong></li>
+<li>Beamforming</li>
+</ul>
+
+<p>beacon, can not be nullized.
+-- two queues.</p>
+
+<p>AIFS, arbitrary inter-frame space</p>
+
+<p>iwlwifi driver for linux.</p>
+
+<p>Further: carry the work to cellular networks?</p>
+
+<h2>BigStation: Enabling Scalable Real-time Signal Processing in Large MU-MIMO Systems</h2>
+
+<p>Kun Tan</p>
+
+<p>by 2015, wireless will exceed wired traffic.
+CISCO VNI 2011-2016.</p>
+
+<p>Gain capacity:</p>
+
+<ul>
+<li>more spectrum. DSA</li>
+<li>spectrum resue. micro, pico, etc, ...
+increase deployment complexity.</li>
+</ul>
+
+<p>MU-MIMO.
+transmit to and receive from multiple stations.</p>
+
+<p>main contribution:
+matrix computing for MIMO is costly limiting the x-by-x size;
+make parallel computation.</p>
+
+<hr>
+
+<h2>zUpdate: Updating Data Center Networks with Zero Loss</h2>
+
+<p>state of the art:</p>
+
+<ul>
+<li>complex planning</li>
+<li>unexpected faults</li>
+<li>laboratory experiments</li>
+</ul>
+
+<p>clos network</p>
+
+<p>from ECMP to weighted ECMP</p>
+
+<p>asynchronous update.</p>
+
+<p>congestion free update.</p>
+
+<h2>Got Loss? Get zOVN!</h2>
+
+<p>Packet loss:</p>
+
+<ul>
+<li>vSwitch</li>
+<li>producer/ consumer problem on each queue.</li>
+</ul>
+
+<p>Hypervisor: H2, Qemu/ KVM</p>
+
+<blockquote>
+<p>Datacenter networking is currently dominated by two major
+trends. One aims toward lossless,
+at layer-2 fabrics based
+on Converged Enhanced Ethernet or InfiniBand, with benefits in enciency and performance. The other targets
+exibility based on Software Defined Networking, which enables
+Overlay Virtual Networking</p>
+</blockquote>
+
+<h2>pFabric: Minimal Near-Optimal Datacenter Transport</h2>
+
+<p>Mohammad Alizadeh</p>
+
+<p>Gaol: complete flows quickly.</p>
+
+<p>FCT: Flow-Completion-Time</p>
+
+<p>Prior work: use rate control to schedule flows.
+e.g. DCTCP, HULL, D2TCP, D3, PDQ.</p>
+
+<p>pFabric:</p>
+
+<ul>
+<li>Packets carry a single priority. e.g. remaining flow size.</li>
+<li>pFabric switches: small buffer; send highest priority; drop lowest priority.</li>
+<li>host: less rate control as possible.
+only to avoid congestion collapse.</li>
+</ul>
+
+<p>[Bar-Noy], NP-hard for ideal flow scheduling:</p>
+
+<ul>
+<li>greedy algo. -- 2-approximation.</li>
+</ul>
+
+<p>pFabric, try to mimic the behaviour distributedly.</p>
+
+<p>Key: decouple flow scheduling (switch) from rate control (host).</p>
+
+<p>min-TCP:</p>
+
+<ul>
+<li>start at line-rate</li>
+<li>no retransmission. just reduce window if packet is dropped.</li>
+<li>slow increase (like TCP)</li>
+</ul>
+
+<p>clean-slate approach: require new switches and minor host changes.</p>
+
+<h2>Integrating Microsecond Circuit Switching into the Data Center</h2>
+
+<p>scale-out networks:</p>
+
+<ul>
+<li>no/ little oversubscription.</li>
+<li>multiple layers.</li>
+</ul>
+
+<p>replace layers of switch to reconfigurable point-to-point switches.</p>
+
+<p>Mordia OCS model.
+(Microsecond Optical Research Data Center Interconnect Architecture).
+Use 3D MEMS.</p>
+
+<p>Previous: Hotspot scheduling.</p>
+
+<h2>Freehand</h2>
+
+<p>RTT</p>
+
+<p>RTO, retransmission timeout</p>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

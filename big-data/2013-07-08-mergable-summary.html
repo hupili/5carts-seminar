@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mergeable Summaries</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Mergeable Summaries </span> </li>
+	<li>Author: <span class="review_meta_value"> Ke Yi </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-07-08</span></li>
+	<li>Category: <span class="review_meta_value">big-data</span></li>
+	<li>Link: <span class="review_meta_value"><a href="http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Ke_Yi.html">http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Ke_Yi.html</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<h2>Background</h2>
+
+<p>Summary: tradeoff between efficiency and accuracy.</p>
+
+<p>Mergable: e.g. sum, max, can be applied on each summarized pieces.</p>
+
+<p>Allow approximate computations:</p>
+
+<ul>
+<li>Random sampling. </li>
+<li>Sketches: random linear projection.
+can be merged trivially because of linearity.
+JL transform, AMS, Count-Min, etc.</li>
+<li>Frequent items.</li>
+<li>Quantiles and histograms. ($\epsilon$-approximation)</li>
+<li>Geometric coresets.
+(a carefully chosen subset of points). </li>
+</ul>
+
+<p>Ideal summary: associative, commutative.</p>
+
+<ul>
+<li>Any computation tree.</li>
+<li>MUD model. [Feldman et al. SODA&#39;08].</li>
+</ul>
+
+<p><strong>Generalizes the streaming model</strong>:</p>
+
+<ul>
+<li>Streaming: a special tree -- a line.</li>
+<li>Thus can not do better than streaming model.</li>
+</ul>
+
+<h2>Application</h2>
+
+<p>large-scale distributed computation:
+programmers have no control on how things are merged.</p>
+
+<p>MapReduce model.
+not for everything.
+not good for analytical queries.</p>
+
+<p>Dremel. 
+more often used than MapReduce inside Google.</p>
+
+<ul>
+<li>Form tree structures. e.g. 4-5 layers.</li>
+<li>Decompose queries, until to leaf servers. </li>
+<li>Merge layer by layer. 
+when to root server, concise data is presented.</li>
+</ul>
+
+<p>Pregel: for large graph processing</p>
+
+<ul>
+<li>all nodes send messages to neighbours. </li>
+<li>local combination. 
+calls for commutative and associative operations.</li>
+<li>Programmers define combiners.
+May save a lot of traffic.</li>
+</ul>
+
+<blockquote>
+<p>Looks the same model as GraphLab.</p>
+</blockquote>
+
+<p>Sensor networks:
+no way to control the merge path.</p>
+
+<h2>Merge random samples</h2>
+
+<p>If underlying population is known, can merge them by simulated sampling.</p>
+
+<p>e.g. uniform sampling without replacement:</p>
+
+<ul>
+<li><code>$S_1=5,S_2=5$</code></li>
+<li>Take from set 1 with prob. <code>N_1/(N_1+N_2)</code>.</li>
+</ul>
+
+<blockquote>
+<p>with/ without replacement?</p>
+</blockquote>
+
+<h2>MinHash</h2>
+
+<p>Retain $k$ elements with smallest hash values.</p>
+
+<p>e.g. can be used to estimate the similarity between sets.</p>
+
+<p>Combine: from top $2k$, take top $k$. -- trivial example.</p>
+
+<h2>Heavy Hitters</h2>
+
+<p>Misra-Gries (MG) algorithm. [MG&#39;82]:
+find up to $k$ items that occur more than $1/k$ fraction of the time in a stream.</p>
+
+<p>Algo:</p>
+
+<ul>
+<li>Keep $k$ candidate</li>
+<li>if monitored item, increase its counter.</li>
+<li>If $&lt;k$ items monitored, add new item with count 1.</li>
+<li>Else, decrease all counts by 1.</li>
+</ul>
+
+<p>Bound:</p>
+
+<ul>
+<li>MG&#39;82. $N/(k+1)$ -- too weak for mergable requirement.</li>
+<li>[Berinde et al. TODS&#39;10] -- too strong.</li>
+</ul>
+
+<p>Every time decrement all counters:
+remove $k+1$ distinct elements.
+-- <strong>the place to introduce errors</strong>.</p>
+
+<p>Merging algo:</p>
+
+<ul>
+<li>Decrement all by <code>$C_{k+1}$</code>.</li>
+<li>Remain $k$ counters.</li>
+</ul>
+
+<h2>Epsilon Approximation</h2>
+
+<p>a more &quot;uniform&quot; sample.</p>
+
+<ul>
+<li>Population.</li>
+<li>--&gt; get a sample (not so uniform)</li>
+<li>--&gt; Pick points further from the sample, making it more uniform.</li>
+</ul>
+
+<p>A dual problem: quantile. 
+i.e. given $\epsilon$-approx, can estimate the rank.</p>
+
+<p><em>equi-height</em> histogram.</p>
+
+<h2>Quantile Problem</h2>
+
+<p>Quantile summaries:</p>
+
+<ul>
+<li>GK. [Greenwald, Khana, SIGMOD&#39;01].</li>
+<li>...</li>
+</ul>
+
+<p>Equal weight merges: Munro-Paterson&#39;80. </p>
+
+<ul>
+<li>Fill base cases: $k$</li>
+<li>Merge two sets, sort, take every other element.</li>
+</ul>
+
+<p>Improvement:</p>
+
+<ul>
+<li>Randomized twist: randomly take even/ odd elements.</li>
+<li>Consider an interval $I$:
+if even elements in $I$, unbiased; 
+if odd, +-1 error.</li>
+<li>Consider the merge tree. 
+errors grows with level; 
+variance dominant by highest level.</li>
+</ul>
+
+<blockquote>
+<p>VC-dimension (?)</p>
+</blockquote>
+
+<h2>Epsilon Kernel</h2>
+
+<ul>
+<li>A subset of points.</li>
+<li>The convex hull approximate the distribution of the data points.</li>
+</ul>
+
+<h2>Open Problems</h2>
+
+<p>...</p>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

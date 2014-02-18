@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Probabilistic Graphical Models for Data Mining and Recommendation in Social Media</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Probabilistic Graphical Models for Data Mining and Recommendation in Social Media </span> </li>
+	<li>Author: <span class="review_meta_value"> Martin Ester </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-10-17</span></li>
+	<li>Category: <span class="review_meta_value">machine-learning</span></li>
+	<li>Link: <span class="review_meta_value"><a href="http://www.cs.sfu.ca/~ester/">http://www.cs.sfu.ca/~ester/</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<p>four effects:
+social influence, correlation influence, selection, transitivity</p>
+
+<p>CF, user-based recsys, problem for cold start user</p>
+
+<p>memory-based approach (?)
+(neighbourhood-based).
+MoleTrust, TrustWalker.</p>
+
+<p>(SocialMF).
+social correlation:
+user vector is a linear combination of his friends.
+compare with [Ma, 2009, Social Trust Ensemble].
+difference: in STE, friends govern the ratings directly;
+in this work, friends govern user factor and then indirectly influence ratings.
+SocialMF outperform STE.
+k=5,10
+(small compared with King&#39;s group, e.g. k=20,40).
+(? not enough to capture the factors)</p>
+
+<p>clustering-based approach.
+assign users/items to clusters and maka recommendation on a per cluster basis.
+Generalized Block Stochastic Model (GBSM).
+not as good as SocialMF;
+however, userful for link prediction (via ROC).</p>
+
+<p>aspect-based opinion mining.
+e.g. for a camera: picture, zoom, battery, etc.
+challenges: different head terms (term normalization);
+different modifiers (adjective normalization);
+noise.
+LDA-based model.
+topic model:
+unsupervised learning;
+perform aspect extraction and grouping at the same time.
+ILDA [sigir&#39;11], (equiv. to D-PLDA).
+review: a bag of opinion phrases, i.e. head term + modifier.
+everything depends on aspect.</p>
+
+<p>extraction of opinion phrases:
+frequency-based tech.;
+POS pattern;
+dependency pattern.</p>
+
+<p>FLDA [www&#39;13].
+train at product category level, not product level.
+product aspect and user aspect.
+perplexity.</p>
+
+<p>implicit aspect.
+e.g. &quot;the camera is heavy&quot;
+instead of &quot;the weight of the camera is high&quot;.</p>
+
+<p>recommend &quot;reviews&quot; (from close users on social network).</p>
+
+<h2>Future</h2>
+
+<p>In the discussion of GBSM,
+it is not so useful in recsys but useful for link prediction.
+Now many works already use social network to assist recsys.
+How about the other direction?
+i.e. use rating matrix to assist mining tasks on social networks.
+can be positioned as using side information for 
+link prediction, community detection, etc.</p>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

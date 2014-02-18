@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>An Information Extraction Approach to Next-Generation Speech Processing</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> An Information Extraction Approach to Next-Generation Speech Processing </span> </li>
+	<li>Author: <span class="review_meta_value"> Chin-Hui Lee </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-08-05</span></li>
+	<li>Category: <span class="review_meta_value">signal-processing</span></li>
+	<li>Link: <span class="review_meta_value"><a href=""></a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<p>Jim</p>
+
+<p>a paper May 2013. IEEE Proceedings: overview and trend of this field.</p>
+
+<p>ASR</p>
+
+<p>ASAT</p>
+
+<h2>Automatic Speech Recognition (ASR)</h2>
+
+<p>history</p>
+
+<p>1970.
+Speech science.
+handcrafted rules.
+local optimization.</p>
+
+<p>mid 70&#39;s. 40 years of HMM, fast progress.
+Slow down in the last few years.
+DNN is only for feature extraction, does not change the whole story.
+math formulation.
+global optimization.
+automatic learning from data.</p>
+
+<p>2010, next paradigm shift.
+Back to basics.
+e.g. Speech science;
+signal processing;
+information extraction.</p>
+
+<p>Super human performance (IBM 2000 challenge).</p>
+
+<h2>State of the art ASR</h2>
+
+<p>Current:</p>
+
+<ul>
+<li>Feature Extraction.</li>
+<li>Acoustic matcher:
+Acoustic model (tens of millions of params);
+workd model;</li>
+<li>Language matcher:
+Language model (hundred of millions of params).</li>
+</ul>
+
+<p>Find the most likely sequence of words in a finite space representation.</p>
+
+<p>Problem: single-equation, enough?</p>
+
+<p>work well if a task follows some specified training protocols:</p>
+
+<ul>
+<li>speaker</li>
+<li>speaking env.</li>
+<li>Acoustic and signal acquisition device.</li>
+<li>domain knowledge.</li>
+</ul>
+
+<p>How about non resource-rich languages?
+(lack of data)</p>
+
+<p>4 IBM researchers use paradigm from ASR to do machine translation.
+-- current state-of-the-art.</p>
+
+<h2>Shannon&#39;s Channel Decoding Paradigm</h2>
+
+<p>Input -- channel -- output -- decoder</p>
+
+<p>maximize the posterior probability of observing this sequence.</p>
+
+<ul>
+<li>Bayes decision theory.</li>
+<li>Input is hidden (e.g. unobserved Markov chain).</li>
+<li>Output is observed HM process</li>
+<li>HMM</li>
+</ul>
+
+<h2>HMM</h2>
+
+<p>Simultaneous modeling of temporal and spectral variations.
+HMM is so far the only model to do this.</p>
+
+<p>GMM</p>
+
+<p>Baum&#39;s paper, started with an inequality.
+James Baker, relate to HMM, what we use today.</p>
+
+<p>Key advances in HMM:</p>
+
+<ul>
+<li>detailed modeling: defy curse of dimensionality.
+MLE, EM, GMM, etc.</li>
+<li>adaptive modeling: quick learning from new data</li>
+<li>Discriminative modeling:
+instead of modeling distribution, estimate decision boundary.</li>
+</ul>
+
+<h2>ASR Limitations</h2>
+
+<p>FSN: finiate state network.</p>
+
+<p>Top-down fully and exact knowledge integration is not likely.</p>
+
+<p>Performance degrades in adverse conditions.</p>
+
+<ul>
+<li>e.g. from native speaker to telephone env, error increases by 10 times.</li>
+<li>domain mismatch. medical and business language.</li>
+<li>WSJ0, trigram (4%) - bigram (7%) - 0-gram (70%)</li>
+</ul>
+
+<h2>Integrated Search</h2>
+
+<p>Spectral</p>
+
+<p>spectrogram reading</p>
+
+<p>Top-down.</p>
+
+<p>Language model is too strong.
+Go for information extraction first.</p>
+
+<h2>Human-Based Speech Processing</h2>
+
+<p>HSR, 10-100 times less word erros.</p>
+
+<ul>
+<li>Knowledge hierarchy</li>
+</ul>
+
+<p>Learn from human. Needs bottom-up.</p>
+
+<ul>
+<li>Reliable anchor detection.</li>
+<li>From pattern matching to detecting information-bearing cues.</li>
+<li>From fluent speech to spontaneous speech.</li>
+</ul>
+
+<h2>Automatic Speech Attribute Transcription (ASAT)</h2>
+
+<p>Bottom up</p>
+
+<p>Speech Analysis Ensemble -- Bank of attribute detectors.</p>
+
+<p>Detection of place of articulation.</p>
+
+<p>Attribute-specific parameterization.</p>
+
+<p><strong>Phone Posteriograms</strong></p>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Another Visible Speech: landmarks</li>
+<li>Lattice Rescoring.
+Penalize HMM scores.
+30% reduction of errors alone.</li>
+<li>Suprasegmental Prosody and Duration.</li>
+<li>Cross-language integration.
+LVCSR, ISCSLP2012</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<ul>
+<li>2004, knowledge-ignorant modeling</li>
+<li>knowledge-rich modeling</li>
+<li>information extraction: supplements pattern matching with signal processing.</li>
+<li>audiovisual data mining.</li>
+<li>language-univeral modeling.</li>
+</ul>
+
+<h2>Q/A</h2>
+
+<p>bottom-up: there is error propagation.
+<strong>needs islands of reliability</strong> at lower layers.</p>
+
+<p>top-down: can not search the whole space, resulting in errors.</p>
+
+<p>For spectrogram reading, human proceeds bottom-up.
+As for human brains, we don&#39;t know experimental evidence.</p>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

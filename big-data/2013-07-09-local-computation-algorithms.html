@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Local Computation Algorithms</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Local Computation Algorithms </span> </li>
+	<li>Author: <span class="review_meta_value"> Ning Xie </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-07-09</span></li>
+	<li>Category: <span class="review_meta_value">big-data</span></li>
+	<li>Link: <span class="review_meta_value"><a href="http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Ning_Xie.html">http://www.itcsc.cuhk.edu.hk/Workshops/Big_Data_Workshop/Ning_Xie.html</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<h2>Related works</h2>
+
+<p>graph partition:</p>
+
+<ul>
+<li>Spielman-Tang</li>
+<li>local partitioning</li>
+<li>runtime depends on the smaller side of the cut.<br></li>
+<li>Apply this work for estimating pagerankd</li>
+</ul>
+
+<p>distributed computation.</p>
+
+<h2>LCA: Local Computation Algorithm</h2>
+
+<p>input. query. random string. set of solutions.</p>
+
+<p>query order oblivious.
+-- for parallelism.</p>
+
+<h2>LCA for Maximal Independent Set (MIS)</h2>
+
+<p>Simulate distributed algorithm sequentially.
+$k$ round parallel algorithm
+--&gt; $d^k$ sequential one.
+$d$ is the bounded degree.</p>
+
+<p>Luby&#39;85:</p>
+
+<ul>
+<li>log n rounds in parallel.</li>
+<li>every vertex select itself by 1/2d.</li>
+<li>Put in MIS if no collision.</li>
+</ul>
+
+<p>local: no need global randomness; log n - wise independence.</p>
+
+<h2>LCA for Hypergraph Coloring</h2>
+
+<blockquote>
+<p>Relation with graph coloring local algorithm in [Lau2013, HW2] ?</p>
+</blockquote>
+
+<p>Beck&#39;91, Alon&#39;91.
+Sequential algorithm</p>
+
+<p>Idea: random ordering.
+Color according to the rank.
+-- only depends on previous nodes.
+-- randomness makes the query tree small.
+-- bound the expectation.
+-- Apply Markov inequality.</p>
+
+<p>Proof:
+high-rank, live longer but are are;
+low-rank, die quickly.</p>
+
+<h2>Abstract from the workshop</h2>
+
+<blockquote>
+<p>Suppose one is given a large graph and would like to compute a maximal independent set. However, it will only be necessary to answer queries of the form <code>Is $v$ in the maximal independent set?&#39;&#39; for a small number of vertices which are unknown in advance. Does one need to perform the whole maximal independent set computation in order to answer these queries? More generally, what if one wants to solve a computational problem for which the input and output are too large to read or write in their entirety, but for which only a small part of the output will be requested? Can the the requested part of the solution be computed faster than computing the entire output? To capture this challenge, we propose a model called \emph{local computation algorithms} which for a computation problem $F$ with input $x$, supports queries to values of arbitrary locations $y_i$ in a legal output $y \in F(x)$, where $F(x)$ denotes the set of possible solutions to $F$. When more than one legal output $y$ exists, the local computation algorithm should output in a way that is consistent with at least one such $y$. Local computation algorithms are intended to distill the common features of several concepts that have appeared in various algorithmic subfields, including local algorithms, locally decodable codes, and local reconstruction. We develop a set of techniques, which under certain conditions can be applied to construct local computation algorithms that run in \emph{polylogarithmic} time and space. Moreover, these local computation algorithms are easily parallelizable and capable of answering all parallel queries consistently. We apply these techniques to problems such as maximal independent set, radio network scheduling, hypergraph coloring and $k$-CNF. Our techniques are based on Beck&#39;s analysis in his algorithmic approach to the Lov{\&#39;{a}}sz Local Lemma, a concentration bound on the sizes of a combinatorial structure called</code>random query trees&#39;&#39; and constructions of small sample spaces for $k$-wise independent random variables.</p>
+
+<p>Based on joint works with Noga Alon, Ronitt Rubinfeld, Gil Tamir and Shai Vardi.</p>
+
+<p>Biography: 
+Ning Xie is an Assistant Professor in the School of Computer and Information Science at Florida International University. His research interests span many aspects of theoretical Computer Science with a focus on sublinear algorithms. He graduated from EECS MIT where his advisor was Ronitt Rubinfeld, and was a postdoctoral fellow at EECS</p>
+</blockquote>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

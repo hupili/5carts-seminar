@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Supporting Long Term Evolution in an Internet Architecture</title>
+    
+    <meta name="author" content="5carts">
+
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {
+	inlineMath: [['$','$']],
+	processEscapes: true
+	}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter-hpl/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter-hpl/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	<!-- hupili's custom elements -->
+	
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/assets/themes/twitter-hpl/custom/5carts.css" type="text/css">
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_articles.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_md_polish.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_icons.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_favicon.js"></script>
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_meta.js"></script>
+	
+    <script type="text/javascript" src="/assets/themes/twitter-hpl/custom/jq_mathjax_parse.js"></script>
+	
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+		  <div class="container">
+			  <a class="brand" href="/">Five Carts</a>
+			  <ul class="nav">
+				  
+
+
+<li> <a href="index.html">Index</a> </li>
+
+
+
+<li> <a href="about.html">About</a> </li>
+
+
+
+			  </ul>
+			  <!--
+			  <div id="searchFrom" style="float:right;display:table-cell;vertical-align:middle;height=11pt">
+			  -->
+			  <ul>
+			  </ul>
+			  <input type="text" style="float:right;" name="j_search" id="j_search" size="30" placeholder="Search" autocomplete="off" required="" class="ui-autocomplete-input" />
+		  </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+<div class="page-header">
+	<h1> </h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="review_meta_block">
+<p>
+Meta data of this review: 
+</p>
+<ul class="review_meta">
+	<li>Name: <span class="review_meta_value"> Supporting Long Term Evolution in an Internet Architecture </span> </li>
+	<li>Author: <span class="review_meta_value"> Dongsu Han (Dong-Soo Han) </span> </li>
+	<li>Alias: <span class="review_meta_value"></span></li>
+	<li>Date: <span class="review_meta_value">2013-08-06</span></li>
+	<li>Category: <span class="review_meta_value">communication</span></li>
+	<li>Link: <span class="review_meta_value"><a href="https://sites.google.com/site/profdshan/">https://sites.google.com/site/profdshan/</a> </span></li>
+	<li>Open Source: <span class="review_meta_value"></span></li>
+	<li>Open Format: <span class="review_meta_value"></span></li>
+	<li>Use Rate: <span class="review_meta_value"></span></li>
+	<li>Quality Rate: <span class="review_meta_value"></span></li>
+</ul>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="span12">
+		<h2>Introduction</h2>
+
+<p>Original network: a dumb data pipe.</p>
+
+<p>CPU grows faster than network bandwidth (?).</p>
+
+<ul>
+<li>network + computation: middle boxes. [Han, NSDI, 2012]</li>
+<li>network + storage: in-network caching.</li>
+</ul>
+
+<p>Evolution: = diversity + incremental deployment</p>
+
+<ul>
+<li>network: gracefully introduce new functions.</li>
+<li>End-points design.</li>
+<li>Cross-cutting design. [Han, Sigcomm&#39;13]</li>
+</ul>
+
+<p>Communication orientation:</p>
+
+<ul>
+<li>Host</li>
+<li>Content. CCN [Jacobson 09]</li>
+<li>Service. Serval [Nordstrom 12]</li>
+</ul>
+
+<p>Problem of todays arch:
+not flexible for new services, e.g. multi-cast.</p>
+
+<h2>eXpressive Internet Architecture (XIA)</h2>
+
+<h3>eXpressive Internet Architecture (XIA)</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">Principal type + type specific identifiers
+</code></pre></div>
+<p>e.g. <code>Host + IP</code></p>
+
+<p>A case of IP:</p>
+
+<ul>
+<li>get content, fail.</li>
+<li>Application-driven recovery <code>--&gt;</code> no incentive to upgrade intermediate nodes.</li>
+<li>Active network: burdens of the network.</li>
+</ul>
+
+<h3>Fallbacks</h3>
+
+<p>case:</p>
+
+<ul>
+<li>Intent: Content.</li>
+<li>Fallback: Host.</li>
+</ul>
+
+<p>Encode multiple identifier:</p>
+
+<ul>
+<li>Directed Acyclic Graph (DAG)-based addressing.</li>
+<li>The overhead of sending DAG.</li>
+<li>Prototype, XIA overhead near IP. XIA+fallback, worse than IP with small packets.</li>
+</ul>
+
+<h3>Q/A</h3>
+
+<p>Original intention of content centric network:
+shift the burden off the host; let the network handle more.</p>
+
+<p>The control plane needs to be further solved.</p>
+
+<h2>Transport protocol for end-points</h2>
+
+<p><strong>Congestion control</strong> (CC) is special for transport protocol:
+fairness and efficiency.</p>
+
+<p>Protocols with different Congestion Control can not coexist.</p>
+
+<p>TCP: end-point based algo. <code>--&gt;</code> diversity.
+Different end-points can pick their own goal.</p>
+
+<p>XCP, RCP: network based algo. <code>--&gt;</code> efficiency.
+Feedback from the network.</p>
+
+<h3>Decouple flexibility</h3>
+
+<ul>
+<li>sender: budget. no overuse of the budget.</li>
+<li>flow&#39;s price.</li>
+</ul>
+
+<p>Feedback. congestion price.
+router updates price.</p>
+
+<h3>Feed-forward</h3>
+
+<p>preload.</p>
+
+<p>effect of reducing peak load.</p>
+
+<h3>Diversity</h3>
+
+<p>Deadline support (<code>D^3</code>, sigcomm&#39;11):</p>
+
+<ul>
+<li>specify desired rate.</li>
+<li>Best Effort (BE) service used to meet deadline, fixed price.</li>
+</ul>
+
+<p>pricing per byte.
+In simulation, routers update every packet.</p>
+
+<h2>References</h2>
+
+<ul>
+<li>Han, Sigcomm 13, FCP, <a href="http://pages.cs.wisc.edu/%7Eakella/papers/fcp-sigcomm13.pdf">http://pages.cs.wisc.edu/~akella/papers/fcp-sigcomm13.pdf</a></li>
+<li>Code of XIA, <a href="https://github.com/xia-project/xia-core">https://github.com/xia-project/xia-core</a></li>
+</ul>
+
+	</div>
+</div>
+
+<hr />
+
+
+	
+
+
+
+<div name="comments">
+	
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '5carts'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div>
+
+
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 5carts 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
